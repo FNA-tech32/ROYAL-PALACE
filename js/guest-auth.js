@@ -1,5 +1,5 @@
 /* ============================================================
-   ROYAL STAY — Guest Authentication
+   ROYAL PALACE — Guest Authentication
    guest-auth.js
 
    Completely separate from the management console (manage/).
@@ -13,7 +13,7 @@ var GUEST_BOOKINGS_KEY = 'rs_guest_bookings';
 /* ---------- Demo guest accounts ---------- */
 function defaultGuestUsers() {
   return [
-    { id: 'g-1', name: 'coded', email: 'coded@gmail.com', password: 'guest123', phone: '0803 221 7788', created: new Date(Date.now() - 86400000 * 30).toISOString() }
+    { id: 'g-1', name: 'coded', email: 'example@gmail.com', password: 'guest123', phone: '9876543210', created: new Date(Date.now() - 86400000 * 30).toISOString() }
   ];
 }
 
@@ -26,9 +26,9 @@ function defaultGuestBookings() {
     return dt.getFullYear() + '-' + String(dt.getMonth() + 1).padStart(2, '0') + '-' + String(dt.getDate()).padStart(2, '0');
   };
   return [
-    { id: 'gb-1', ref: 'RS-A7K2P9', roomName: 'Executive Room', roomImage: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=70', pricePerNight: 65000, checkin: d(2), checkout: d(5), nights: 3, guests: 2, rooms: 1, total: 157312, paymentMethod: 'Pay at Hotel', status: 'confirmed', guestName: 'coded', guestEmail: 'coded@gmail.com', guestPhone: '0803 221 7788', created: new Date(Date.now() - 86400000 * 5).toISOString() },
-    { id: 'gb-2', ref: 'RS-Q5M3D8', roomName: 'Deluxe Room', roomImage: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=70', pricePerNight: 45000, checkin: d(-8), checkout: d(-5), nights: 3, guests: 2, rooms: 1, total: 145125, paymentMethod: 'Card (paid now)', status: 'completed', guestName: 'coded', guestEmail: 'coded@gmail.com', guestPhone: '0803 221 7788', created: new Date(Date.now() - 86400000 * 15).toISOString() },
-    { id: 'gb-3', ref: 'RS-B9W6K1', roomName: 'Suite Room', roomImage: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=70', pricePerNight: 95000, checkin: d(14), checkout: d(17), nights: 3, guests: 2, rooms: 1, total: 228375, paymentMethod: 'Card (paid now)', status: 'pending', guestName: 'coded', guestEmail: 'coded@gmail.com', guestPhone: '0805 600 1122', created: new Date(Date.now() - 86400000 * 2).toISOString() }
+    { id: 'gb-1', ref: 'RS-A7K2P9', roomName: 'Executive Room', roomImage: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=70', pricePerNight: 65000, checkin: d(2), checkout: d(5), nights: 3, guests: 2, rooms: 1, total: 157312, paymentMethod: 'Pay at Hotel', status: 'confirmed', guestName: 'coded', guestEmail: 'example@gmail.com', guestPhone: '9876543210', created: new Date(Date.now() - 86400000 * 5).toISOString() },
+    { id: 'gb-2', ref: 'RS-Q5M3D8', roomName: 'Deluxe Room', roomImage: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=70', pricePerNight: 45000, checkin: d(-8), checkout: d(-5), nights: 3, guests: 2, rooms: 1, total: 145125, paymentMethod: 'Card (paid now)', status: 'completed', guestName: 'coded', guestEmail: 'example@gmail.com', guestPhone: '9876543210', created: new Date(Date.now() - 86400000 * 15).toISOString() },
+    { id: 'gb-3', ref: 'RS-B9W6K1', roomName: 'Suite Room', roomImage: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=70', pricePerNight: 95000, checkin: d(14), checkout: d(17), nights: 3, guests: 2, rooms: 1, total: 228375, paymentMethod: 'Card (paid now)', status: 'pending', guestName: 'coded', guestEmail: 'example@gmail.com', guestPhone: '9876543210', created: new Date(Date.now() - 86400000 * 2).toISOString() }
   ];
 }
 

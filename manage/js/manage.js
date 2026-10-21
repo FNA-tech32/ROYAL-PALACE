@@ -1,5 +1,5 @@
 /* ============================================================
-   ROYAL STAY — Demo Backend / Management Console
+   ROYAL PALACE — Demo Backend / Management Console
    manage/js/manage.js
 
    A LOCAL DEMO "backend". Everything runs in the browser on
@@ -149,34 +149,34 @@ function defaultDB() {
   return {
     schema: 1,
     settings: {
-      brandName: 'ROYAL STAY', brandSub: 'HOTELS & RESORTS',
+      brandName: 'ROYAL PALACE', brandSub: 'HOTELS & RESORTS',
       tagline: 'Experience Comfort, Excellence & Elegance',
       address: '12 Adetokunbo Ademola Street, Victoria Island, Lagos, Nigeria',
-      phoneDisplay: '0916 133 0967', phoneTel: '+2349161330967', whatsapp: '2349161330967',
-      email: 'reservations@royalstay.com',
+      phoneDisplay: '9876543210', phoneTel: '9876543210', whatsapp: '9876543210',
+      email: 'example@gmail.com',
       currency: '\u20A6', taxRate: 7.5, cancelHours: 48,
       allowOnlineBookings: true, maintenanceMode: false
     },
     rooms: defaultCatalog(),
     users: [
-      { id: 'u-admin', name: 'Adaeze Okonkwo', email: 'admin@royalstay.com', password: 'admin123', role: 'admin', phone: '0916 133 0967', created: isoHoursAgo(24 * 90) },
-      { id: 'u-staff', name: 'Emeka Okafor', email: 'manager@royalstay.com', password: 'manager123', role: 'staff', phone: '0803 221 7788', created: isoHoursAgo(24 * 40) },
-      { id: 'u-tunde', name: 'Tunde Bakare', email: 'tunde@example.com', password: 'guest123', role: 'guest', phone: '0805 600 1122', created: isoHoursAgo(24 * 12) },
-      { id: 'u-chiamaka', name: 'Chiamaka Nwosu', email: 'chiamaka@example.com', password: 'guest123', role: 'guest', phone: '0812 004 5566', created: isoHoursAgo(24 * 6) }
+      { id: 'u-admin', name: 'Adaeze Okonkwo', email: 'admin@example.com', password: 'admin123', role: 'admin', phone: '9876543210', created: isoHoursAgo(24 * 90) },
+      { id: 'u-staff', name: 'Emeka Okafor', email: 'manager@example.com', password: 'manager123', role: 'staff', phone: '9876543210', created: isoHoursAgo(24 * 40) },
+      { id: 'u-tunde', name: 'Tunde Bakare', email: 'tunde@example.com', password: 'guest123', role: 'guest', phone: '9876543210', created: isoHoursAgo(24 * 12) },
+      { id: 'u-chiamaka', name: 'Chiamaka Nwosu', email: 'chiamaka@example.com', password: 'guest123', role: 'guest', phone: '9876543210', created: isoHoursAgo(24 * 6) }
     ],
     roles: defaultRoles(),
     bookings: [
-      mkBooking({ ref: 'RS-A7K2P9', roomId: 'executive', roomName: 'Executive Room', price: 65000, checkin: dateISO(1), checkout: dateISO(4), guests: 2, rooms: 1, guestName: 'Tunde Bakare', guestEmail: 'tunde@example.com', guestPhone: '0805 600 1122', payment: 'Pay at Hotel', status: 'confirmed', created: isoHoursAgo(26) }),
-      mkBooking({ ref: 'RS-Q5M3D8', roomId: 'deluxe', roomName: 'Deluxe Room', price: 45000, checkin: dateISO(3), checkout: dateISO(6), guests: 2, rooms: 1, guestName: 'Amara Eze', guestEmail: 'amara.eze@mail.com', guestPhone: '0809 344 2110', payment: 'Card (paid now)', status: 'confirmed', created: isoHoursAgo(30) }),
-      mkBooking({ ref: 'RS-B9W6K1', roomId: 'standard', roomName: 'Standard Room', price: 35000, checkin: dateISO(-1), checkout: dateISO(1), guests: 2, rooms: 1, guestName: 'Tunde Bakare', guestEmail: 'tunde@example.com', guestPhone: '0805 600 1122', payment: 'Card (paid now)', status: 'checked-in', created: isoHoursAgo(70) }),
-      mkBooking({ ref: 'RS-C4R8T3', roomId: 'suite', roomName: 'Suite Room', price: 95000, checkin: dateISO(-10), checkout: dateISO(-7), guests: 4, rooms: 1, guestName: 'Chiamaka Nwosu', guestEmail: 'chiamaka@example.com', guestPhone: '0812 004 5566', payment: 'Pay at Hotel', status: 'completed', created: isoHoursAgo(24 * 11) }),
-      mkBooking({ ref: 'RS-J2H7V5', roomId: 'presidential', roomName: 'Presidential Suite', price: 150000, checkin: dateISO(5), checkout: dateISO(8), guests: 4, rooms: 1, guestName: 'Amara Eze', guestEmail: 'amara.eze@mail.com', guestPhone: '0809 344 2110', payment: 'Card (paid now)', status: 'cancelled', created: isoHoursAgo(24 * 2) })
+      mkBooking({ ref: 'RS-A7K2P9', roomId: 'executive', roomName: 'Executive Room', price: 65000, checkin: dateISO(1), checkout: dateISO(4), guests: 2, rooms: 1, guestName: 'Tunde Bakare', guestEmail: 'tunde@example.com', guestPhone: '9876543210', payment: 'Pay at Hotel', status: 'confirmed', created: isoHoursAgo(26) }),
+      mkBooking({ ref: 'RS-Q5M3D8', roomId: 'deluxe', roomName: 'Deluxe Room', price: 45000, checkin: dateISO(3), checkout: dateISO(6), guests: 2, rooms: 1, guestName: 'Amara Eze', guestEmail: 'example@gmail.com', guestPhone: '9876543210', payment: 'Card (paid now)', status: 'confirmed', created: isoHoursAgo(30) }),
+      mkBooking({ ref: 'RS-B9W6K1', roomId: 'standard', roomName: 'Standard Room', price: 35000, checkin: dateISO(-1), checkout: dateISO(1), guests: 2, rooms: 1, guestName: 'Tunde Bakare', guestEmail: 'tunde@example.com', guestPhone: '9876543210', payment: 'Card (paid now)', status: 'checked-in', created: isoHoursAgo(70) }),
+      mkBooking({ ref: 'RS-C4R8T3', roomId: 'suite', roomName: 'Suite Room', price: 95000, checkin: dateISO(-10), checkout: dateISO(-7), guests: 4, rooms: 1, guestName: 'Chiamaka Nwosu', guestEmail: 'chiamaka@example.com', guestPhone: '9876543210', payment: 'Pay at Hotel', status: 'completed', created: isoHoursAgo(24 * 11) }),
+      mkBooking({ ref: 'RS-J2H7V5', roomId: 'presidential', roomName: 'Presidential Suite', price: 150000, checkin: dateISO(5), checkout: dateISO(8), guests: 4, rooms: 1, guestName: 'Amara Eze', guestEmail: 'example@gmail.com', guestPhone: '9876543210', payment: 'Card (paid now)', status: 'cancelled', created: isoHoursAgo(24 * 2) })
     ],
     admissionRequests: [
-      { id: 'adm-1', guest: 'Oluchi Adeyemi', phone: '0803 900 3344', room: 'Deluxe Room', roomId: 'deluxe', arrival: dateISO(0), time: '14:00', type: 'Early check-in', notes: 'Flying in from Abuja — asked to check in before 2pm.', status: 'pending', created: isoHoursAgo(6) },
-      { id: 'adm-2', guest: 'Musa Ibrahim', phone: '0701 118 9020', room: 'Presidential Suite', roomId: 'presidential', arrival: dateISO(1), time: '22:30', type: 'Late arrival', notes: 'Landing at 21:45, please keep reception informed.', status: 'pending', created: isoHoursAgo(9) },
-      { id: 'adm-3', guest: 'Funke Alabi', phone: '0802 660 7710', room: 'Executive Room', roomId: 'executive', arrival: dateISO(-1), time: '08:10', type: 'Airport pickup', notes: 'Needs limousine pickup from MMA2 terminal.', status: 'approved', created: isoHoursAgo(50) },
-      { id: 'adm-4', guest: 'David Osei', phone: '0810 227 4455', room: 'Family Room', roomId: 'family', arrival: dateISO(2), time: '16:00', type: 'VIP escort', notes: 'Corporate VIP — arrange welcome amenity.', status: 'pending', created: isoHoursAgo(3) }
+      { id: 'adm-1', guest: 'Oluchi Adeyemi', phone: '9876543210', room: 'Deluxe Room', roomId: 'deluxe', arrival: dateISO(0), time: '14:00', type: 'Early check-in', notes: 'Flying in from Abuja — asked to check in before 2pm.', status: 'pending', created: isoHoursAgo(6) },
+      { id: 'adm-2', guest: 'Musa Ibrahim', phone: '9876543210', room: 'Presidential Suite', roomId: 'presidential', arrival: dateISO(1), time: '22:30', type: 'Late arrival', notes: 'Landing at 21:45, please keep reception informed.', status: 'pending', created: isoHoursAgo(9) },
+      { id: 'adm-3', guest: 'Funke Alabi', phone: '9876543210', room: 'Executive Room', roomId: 'executive', arrival: dateISO(-1), time: '08:10', type: 'Airport pickup', notes: 'Needs limousine pickup from MMA2 terminal.', status: 'approved', created: isoHoursAgo(50) },
+      { id: 'adm-4', guest: 'David Osei', phone: '9876543210', room: 'Family Room', roomId: 'family', arrival: dateISO(2), time: '16:00', type: 'VIP escort', notes: 'Corporate VIP — arrange welcome amenity.', status: 'pending', created: isoHoursAgo(3) }
     ],
     transactions: [
       { id: 'txn-1', ref: 'TXN-88412', bookingRef: 'RS-Q5M3D8', guest: 'Amara Eze', desc: 'Website payment — Deluxe Room', method: 'Card', amount: 145125, status: 'paid', created: isoHoursAgo(30) },
@@ -392,7 +392,7 @@ function initConsole() {
 
 function brandHTML(small) {
   var s = settings();
-  return '<div class="brand-mark">RS</div>' +
+  return '<div class="brand-mark">RP</div>' +
     '<div class="brand-text"><strong>' + esc(s.brandName) + '</strong><small>' + esc(s.brandSub) + '</small></div>';
 }
 
@@ -697,7 +697,7 @@ function renderGuestDashboard(host) {
   var d = db();
   var mine = d.bookings.filter(function (b) { return b.guestEmail && b.guestEmail.toLowerCase() === u.email.toLowerCase(); });
   var upcoming = mine.filter(function (b) { return b.status === 'pending' || b.status === 'confirmed'; });
-  var html = viewHead('Welcome, ' + esc(u.name.split(' ')[0]), 'Your stays at Royal Stay — view and manage your reservations here.');
+  var html = viewHead('Welcome, ' + esc(u.name.split(' ')[0]), 'Your stays at Royal Palace — view and manage your reservations here.');
   html += '<div class="kpi-grid">' +
     '<div class="kpi"><div class="k-ico ic-gold">' + ICONS.bookings + '</div><div><strong>' + mine.length + '</strong><span>Total bookings</span></div></div>' +
     '<div class="kpi"><div class="k-ico ic-green">' + ICONS.clock + '</div><div><strong>' + upcoming.length + '</strong><span>Upcoming stays</span></div></div>' +
@@ -942,7 +942,7 @@ function admissionModal() {
     '<form data-form="admissionForm" novalidate>' +
       '<div class="form-row">' +
         '<div class="form-field"><label>Guest full name <span class="req">*</span></label><input id="aGuest" placeholder="e.g. Oluchi Adeyemi"></div>' +
-        '<div class="form-field"><label>Phone</label><input id="aPhone" placeholder="0803 000 0000"></div>' +
+        '<div class="form-field"><label>Phone</label><input id="aPhone" placeholder="9876543210"></div>' +
       '</div>' +
       '<div class="form-row">' +
         '<div class="form-field"><label>Room</label><select id="aRoom">' + roomOpts + '</select></div>' +
@@ -1004,7 +1004,7 @@ function userModal() {
     '<form data-form="userForm" novalidate>' +
       '<div class="form-row">' +
         '<div class="form-field"><label>Full name <span class="req">*</span></label><input id="uName" placeholder="e.g. Ada Obi"></div>' +
-        '<div class="form-field"><label>Phone</label><input id="uPhone" placeholder="0803 000 0000"></div>' +
+        '<div class="form-field"><label>Phone</label><input id="uPhone" placeholder="9876543210"></div>' +
       '</div>' +
       '<div class="form-field"><label>Email <span class="req">*</span></label><input id="uEmail" type="email" placeholder="name@example.com"></div>' +
       '<div class="form-row">' +
@@ -1325,7 +1325,7 @@ function userFormSubmit() {
 function settingsFormSubmit() {
   var d = db();
   var s = d.settings;
-  s.brandName = $('#sBrand').value.trim() || 'ROYAL STAY';
+  s.brandName = $('#sBrand').value.trim() || 'ROYAL PALACE';
   s.brandSub = $('#sBrandSub').value.trim() || 'HOTELS & RESORTS';
   s.tagline = $('#sTagline').value.trim();
   s.address = $('#sAddress').value.trim();
@@ -1569,11 +1569,11 @@ function initLogin() {
   // Demo quick-fill buttons
   var adminBtn = $('#demoAdmin'), managerBtn = $('#demoManager');
   if (adminBtn) adminBtn.addEventListener('click', function () {
-    $('#loginEmail').value = 'admin@royalstay.com';
+    $('#loginEmail').value = 'admin@example.com';
     $('#loginPassword').value = 'admin123';
   });
   if (managerBtn) managerBtn.addEventListener('click', function () {
-    $('#loginEmail').value = 'manager@royalstay.com';
+    $('#loginEmail').value = 'manager@example.com';
     $('#loginPassword').value = 'manager123';
   });
 }

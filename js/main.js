@@ -1,14 +1,14 @@
 /* ============================================================
-   ROYAL STAY — Hotels & Resorts
+   ROYAL PALACE — Hotels & Resorts
    Shared front-end logic
    ============================================================ */
 
 /* ---------- Config ---------- */
 var RS_CONFIG = {
-  phoneDisplay: '0916 133 0967',
-  phoneTel: 'tel:+2349161330967',
-  whatsapp: '2349161330967',
-  email: 'reservations@royalstay.com',
+  phoneDisplay: '9876543210',
+  phoneTel: 'tel:9876543210',
+  whatsapp: '9876543210',
+  email: 'example@gmail.com',
   address: '12 Adetokunbo Ademola Street, Victoria Island, Lagos, Nigeria',
   currency: '\u20A6' // Naira
 };
@@ -71,7 +71,7 @@ var FALLBACK_IMG = "data:image/svg+xml;utf8," +
   "<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>" +
   "<stop offset='0' stop-color='%230a1e3c'/><stop offset='1' stop-color='%231d4e89'/></linearGradient></defs>" +
   "<rect width='800' height='600' fill='url(%23g)'/>" +
-  "<text x='400' y='290' font-family='Georgia,serif' font-size='36' fill='%23e5c170' text-anchor='middle'>ROYAL STAY</text>" +
+  "<text x='400' y='290' font-family='Georgia,serif' font-size='36' fill='%23e5c170' text-anchor='middle'>ROYAL PALACE</text>" +
   "<text x='400' y='330' font-family='Arial,sans-serif' font-size='16' fill='%23ffffff' text-anchor='middle' opacity='0.75'>Luxury Hotels %26 Resorts</text></svg>";
 
 window.imgFallback = function (img) {
@@ -584,7 +584,7 @@ function initRoomDetails() {
         '<img src="' + room.image + '" alt="' + room.name + '" onerror="imgFallback(this)">' +
       '</div>' +
       '<div class="rd-info">' +
-        '<span class="eyebrow">' + (room.badge || 'Royal Stay') + '</span>' +
+        '<span class="eyebrow">' + (room.badge || 'Royal Palace') + '</span>' +
         '<h1 class="serif">' + room.name + '</h1>' +
         '<p class="lead">' + room.tagline + '</p>' +
         '<div class="rd-meta">' +
@@ -688,7 +688,7 @@ function initBookingPage() {
           '<div class="form-grid">' +
             '<div class="form-field full"><label>Full Name <span class="req">*</span></label><input type="text" id="gName" placeholder="e.g. Ada Obi" required></div>' +
             '<div class="form-field"><label>Email Address <span class="req">*</span></label><input type="email" id="gEmail" placeholder="you@example.com" required></div>' +
-            '<div class="form-field"><label>Phone Number <span class="req">*</span></label><input type="tel" id="gPhone" placeholder="e.g. 09161330967" required></div>' +
+            '<div class="form-field"><label>Phone Number <span class="req">*</span></label><input type="tel" id="gPhone" placeholder="e.g. 9876543210" required></div>' +
             '<div class="form-field"><label>Country</label><input type="text" id="gCountry" placeholder="e.g. Nigeria"></div>' +
             '<div class="form-field"><label>Special Requests</label><textarea id="gRequests" placeholder="Early check-in, airport pickup, celebration setup\u2026"></textarea></div>' +
           '</div>' +
@@ -786,7 +786,7 @@ function initConfirmation() {
     return;
   }
 
-  var waText = 'Hello Royal Stay! I just made a booking.\n\n' +
+  var waText = 'Hello Royal Palace! I just made a booking.\n\n' +
     'Booking Ref: ' + booking.ref + '\n' +
     'Room: ' + booking.roomName + '\n' +
     'Check-in: ' + fmtDate(booking.checkin) + '\n' +
@@ -816,7 +816,7 @@ function initConfirmation() {
           '<div class="cd-item"><small>Guest</small><strong>' + booking.guest.name + '</strong></div>' +
           '<div class="cd-item"><small>Phone</small><strong>' + booking.guest.phone + '</strong></div>' +
           '<div class="cd-item"><small>Amount paid</small><strong>' + fmtNaira(booking.total) + '</strong></div>' +
-          '<div class="cd-item"><small>Hotel Contact</small><strong><a href="' + RS_CONFIG.phoneTel + '">09161330967</a></strong></div>' +
+          '<div class="cd-item"><small>Hotel Contact</small><strong><a href="' + RS_CONFIG.phoneTel + '">9876543210</a></strong></div>' +
         '</div>' +
         (booking.guest.requests ? '<p class="lead mt-2" style="font-size:13.5px"><strong>Special requests:</strong> ' + booking.guest.requests + '</p>' : '') +
       '</div>' +
@@ -847,7 +847,7 @@ function initContact() {
 
     if (!name || !message) { toast('Please fill in your name and message.'); return; }
 
-    var text = 'Hello Royal Stay! New message from your website.\n\n' +
+    var text = 'Hello Royal Palace! New message from your website.\n\n' +
       'Name: ' + name + '\n' +
       'Email: ' + (email || 'Not provided') + '\n' +
       'Phone: ' + (phone || 'Not provided') + '\n' +

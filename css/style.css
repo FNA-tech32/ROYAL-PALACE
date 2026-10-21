@@ -1,5 +1,5 @@
 /* ============================================================
-   ROYAL STAY — Hotels & Resorts
+   ROYAL PALACE — Hotels & Resorts
    Shared stylesheet
    ============================================================ */
 
@@ -28,7 +28,11 @@
 /* ---------- Reset / base ---------- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 body {
   font-family: var(--sans);
@@ -36,6 +40,9 @@ body {
   background: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 img { max-width: 100%; display: block; }
